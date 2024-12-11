@@ -45,7 +45,7 @@ sap.ui.define([
                                 ],
                                 and: false,
                             })
-                        );
+                        );//commit
                     }
                     that.oProdList.getBinding("items").filter(oFilters);
                 }
