@@ -14,7 +14,7 @@ sap.ui.define([
                     sId = oEvent.getParameter("id"),
                     oFilters = [];
                 // Check if search filter is to be applied
-                sQuery = sQuery ? sQuery.trim() : "";
+                sQuery = sQuery ? sQuery.trim() : "";//hgvhgv
 
                 if (sId.includes("LocS")) {
                     if (sQuery !== "") {
