@@ -6,6 +6,7 @@ sap.ui.define([
 
         return Controller.extend("project1.controller.View1", {
             onInit: function () {
+                var that = this;
 
             },
             handleSearch1: function (oEvent) {
