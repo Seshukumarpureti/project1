@@ -12,7 +12,7 @@
 			<Toolbar>
 				<Button type="Back" press="onPress" />
 				<ToolbarSpacer/> 
-				<Title text="Title" level="H2"/>
+				<Title text="New Page" level="H2"/>
 				<ToolbarSpacer/>
 				<Button icon="sap-icon://edit" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>
 			</Toolbar>
