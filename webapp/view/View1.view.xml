@@ -11,7 +11,7 @@
 		<customHeader>
 			<Toolbar>
 				<Button type="Back" press="onPress" />
-				<ToolbarSpacer/>
+				<ToolbarSpacer/> 
 				<Title text="Title" level="H2"/>
 				<ToolbarSpacer/>
 				<Button icon="sap-icon://edit" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>
