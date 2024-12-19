@@ -51,5 +51,47 @@ sap.ui.define([
                     that.oProdList.getBinding("items").filter(oFilters);
                 }
             },
+            handleSearch1: function (oEvent) {
+                var sQuery =
+                    oEvent.getParameter("value") || oEvent.getParameter("newValue"),
+                    sId = oEvent.getParameter("id"),
+                    oFilters = [];
+                // Check if search filter is to be applied
+                sQuery = sQuery ? sQuery.trim() : "";
+
+                if (sId.includes("LocS")) {
+                    if (sQuery !== "") {
+                        oFilters.push(
+                            new Filter({
+                                filters: [
+                                    new Filter("DEMAND_LOC", FilterOperator.Contains, sQuery),
+                                    new Filter("DEMAND_DESC", FilterOperator.Contains, sQuery),
+                                ],
+                                and: false,
+                            })
+                        );
+                    }
+                    that.oLocList = sap.ui.getCore().byId("LocSlctListCPS")
+                    that.oLocList.getBinding("items").filter(oFilters);
+                    if (that.oLocList.getItems().length == 0) {
+                        that.oLocList.setNoDataText("No Data");
+                    }
+                }
+
+                if (sId.includes("prod")) {
+                    if (sQuery !== "") {
+                        oFilters.push(
+                            new Filter({
+                                filters: [
+                                    new Filter("PRODUCT_ID", FilterOperator.Contains, sQuery),
+                                    new Filter("PROD_DESC", FilterOperator.Contains, sQuery),
+                                ],
+                                and: false,
+                            })
+                        );
+                    }
+                    that.oProdList.getBinding("items").filter(oFilters);
+                }
+            },
         });
     });
